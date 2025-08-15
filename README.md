@@ -27,10 +27,19 @@ TorSearch is a project designed to provide a search engine for the Tor network, 
 
 1. Start the Tor service on your machine.
 2. Run the application:
-    ```bash
-    python scanner.py
-    ```
-3. Open your browser and navigate to `http://localhost:5000`.
+3. ```bash python3 searcher.py --help```
+usage: searcher.py [-h] [-v] [-n NUMBER] [search]
+
+Onion Services Search
+
+positional arguments:
+  search               Search term (default: xmpp)
+
+options:
+  -h, --help           show this help message and exit
+  -v, --version        show program's version number and exit
+  -n, --number NUMBER  Number of results to display (default: 20)
+                                                                   
 
 ## Contributing
 

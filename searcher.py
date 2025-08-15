@@ -64,8 +64,8 @@ class Colors:
 
 url_api= f"https://ahmia.fi/search/?q={args.search}"
 proxies = {
-    'http': 'socks5h://127.0.0.1:9150',
-    'https': 'socks5h://127.0.0.1:9150'
+    'http': 'socks5h://127.0.0.1:9050',
+    'https': 'socks5h://127.0.0.1:9050'
 }
 response = requests.get(url_api, proxies=proxies, timeout=10)
 soup = BeautifulSoup(response.content, 'html.parser')
