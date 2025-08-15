@@ -20,15 +20,19 @@ TorSearch is a project designed to provide a search engine for the Tor network, 
     ```
 3. Install dependencies:
     ```bash
-    pip install -r requirements.txt
+    pip3 install -r requirements.txt
     ```
 
 ## Usage
 
 1. Start the Tor service on your machine.
 2. Run the application:
-3. ```bash python3 searcher.py --help```
-usage: searcher.py [-h] [-v] [-n NUMBER] [search]
+3. How to use:  
+```bash 
+   python3 searcher.py --help
+```
+ 
+```usage: searcher.py [-h] [-v] [-n NUMBER] [search]
 
 Onion Services Search
 
@@ -39,7 +43,7 @@ options:
   -h, --help           show this help message and exit
   -v, --version        show program's version number and exit
   -n, --number NUMBER  Number of results to display (default: 20)
-                                                                   
+```                                                                   
 
 ## Contributing
 
