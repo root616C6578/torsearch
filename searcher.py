@@ -25,6 +25,10 @@ import socket
 import time 
 import argparse
 
+if os.getuid() > 0:
+    print("You must start script with root! (sudo search torsite -n 5)")
+    sys.exit(0)
+
 parser = argparse.ArgumentParser(description='Onion Services Search')
 parser.add_argument('-v','--version', action='version', version=f'%(prog)s {__version__}')
 parser.add_argument('-n', '--number', type=int, default=5, help='Number of results to display (default: 5)')
@@ -72,8 +76,13 @@ proxies = {
     'http': 'socks5h://127.0.0.1:9050',
     'https': 'socks5h://127.0.0.1:9050'
 }
-response = requests.get(url_api, proxies=proxies, timeout=10)
-soup = BeautifulSoup(response.content, 'html.parser')
+try:
+    response = requests.get(url_api, proxies=proxies, timeout=10)
+    soup = BeautifulSoup(response.content, 'html.parser')
+except requests.exceptions.ReadTimeout:
+    print("Timout exited, please restart program")
+    subprocess.Popen(['sudo systemctl restart tor'], shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    os._exit(0)
 
 def check_tor_running(self, proxies):
     test_url = "http://api.ipify.org"
