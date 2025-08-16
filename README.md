@@ -37,12 +37,12 @@ TorSearch is a project designed to provide a search engine for the Tor network, 
 Onion Services Search
 
 positional arguments:
-  search               Search term (default: xmpp)
+  searcher               Search term (default: sudo searcher tor -n 5)
 
 options:
   -h, --help           show this help message and exit
   -v, --version        show program's version number and exit
-  -n, --number NUMBER  Number of results to display (default: 20)
+  -n, --number NUMBER  Number of results to display (default: 5)
 ```                                                                   
 
 ## Contributing
