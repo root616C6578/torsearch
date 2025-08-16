@@ -27,8 +27,8 @@ import argparse
 
 parser = argparse.ArgumentParser(description='Onion Services Search')
 parser.add_argument('-v','--version', action='version', version=f'%(prog)s {__version__}')
-parser.add_argument('-n', '--number', type=int, default=20, help='Number of results to display (default: 20)')
-parser.add_argument('search', nargs='?', default='xmpp', help='Search term (default: xmpp)')
+parser.add_argument('-n', '--number', type=int, default=20, help='Number of results to display (default: 5)')
+parser.add_argument('search', nargs='?', help='Search term (default prompt:sudo searcher xmpp -n 5)')
 args = parser.parse_args()
 
 def wait_for_tor(host="127.0.0.1", port=9050, timeout=60):
