@@ -27,7 +27,7 @@ import argparse
 
 parser = argparse.ArgumentParser(description='Onion Services Search')
 parser.add_argument('-v','--version', action='version', version=f'%(prog)s {__version__}')
-parser.add_argument('-n', '--number', type=int, default=20, help='Number of results to display (default: 5)')
+parser.add_argument('-n', '--number', type=int, default=5, help='Number of results to display (default: 5)')
 parser.add_argument('search', nargs='?', help='Search term (default prompt:sudo searcher xmpp -n 5)')
 args = parser.parse_args()
 
