@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 __version__ = '1.0.0'
 __author__ = 'root616C6578'
 __license__ = 'MIT'
