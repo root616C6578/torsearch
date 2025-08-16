@@ -18,5 +18,5 @@ sudo chmod +x /opt/torsearch/searcher.py
 echo -e "\e[32mThe installation was completed!\e[0m"
 echo -e "\e[33mPlease input  in terminal: searcher --help\e[0m"
 
-sudo rm -rf  ../torsearch | cd ~
+sudo rm -rf  ../torsearch && cd ~
 
