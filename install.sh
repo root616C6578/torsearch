@@ -16,5 +16,5 @@ sudo ln -s /opt/torsearch/searcher.py /usr/local/bin/searcher
 sudo chmod +x /opt/torsearch/searcher.py
 sudo rm -rf  torsearch
 cd ~
-echo "The installation was completed!"
-echo "Please input  in terminal: searcher --help"
+echo -e "\e[32mThe installation was completed!\e[0m"
+echo -e "\e[33mPlease input  in terminal: searcher --help\e[0m"
