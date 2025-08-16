@@ -30,7 +30,8 @@ parser.add_argument('-v','--version', action='version', version=f'%(prog)s {__ve
 parser.add_argument('-n', '--number', type=int, default=5, help='Number of results to display (default: 5)')
 parser.add_argument('search', nargs='?', help='Search term (default prompt:sudo searcher xmpp -n 5)')
 args = parser.parse_args()
-
+if args.search is None:
+    print("Please input name url!(exaple: searcher xmpp )")
 def wait_for_tor(host="127.0.0.1", port=9050, timeout=60):
     start = time.time()
     while time.time() - start < timeout:
@@ -83,7 +84,6 @@ def check_tor_running(self, proxies):
         print(f'{Colors.BOLD}{Colors.RED}Error connecting to Tor: {e}{Colors.RESET}')
 
 resultat = soup.find_all(class_='result')
-  # Limit to first 20 results for brevity
 number_of_results = args.number if args.number > 0 else None
 if number_of_results is not None and isinstance(number_of_results, int):
     if number_of_results < 1:
