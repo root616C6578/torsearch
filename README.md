@@ -23,7 +23,8 @@ TorSearch is a project designed to provide a search engine for the Tor network, 
     ```
 3. Install dependencies:
     ```bash
-    pip3 install -r requirements.txt
+    sudo chmod +x install.sh
+    sudo ./install
     ```
 
 ## Usage
@@ -32,10 +33,10 @@ TorSearch is a project designed to provide a search engine for the Tor network, 
 2. Run the application:
 3. How to use:  
 ```bash 
-   python3 searcher.py --help
+   searcher --help
 ```
  
-```usage: searcher.py [-h] [-v] [-n NUMBER] [search]
+```usage: searcher [-h] [-v] [-n NUMBER] [search]
 
 Onion Services Search
 
