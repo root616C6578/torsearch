@@ -9,10 +9,6 @@ TorSearch is a project designed to provide a search engine for the Tor network, 
 - Secure and anonymous browsing.
 
 ## Installation
-0. Download a tor:
-   ```bash
-    sudo apt install tor -y
-   ```
 1. Clone the repository:
     ```bash
     git clone https://github.com/root616C6578/torsearch.git
