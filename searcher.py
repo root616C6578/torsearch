@@ -31,7 +31,7 @@ parser.add_argument('-n', '--number', type=int, default=5, help='Number of resul
 parser.add_argument('search', nargs='?', help='Search term (default prompt:sudo searcher xmpp -n 5)')
 args = parser.parse_args()
 if args.search is None:
-    print("Please input name url!(exaple: searcher xmpp )")
+    print("Please input a domain name! (example: searcher xmpp )")
     os._exit(0)
     
 def wait_for_tor(host="127.0.0.1", port=9050, timeout=60):
